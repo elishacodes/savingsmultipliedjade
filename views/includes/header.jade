@@ -1,0 +1,31 @@
+#pHeader
+  .row
+    .col-lg-1.col-md-1.col-sm-0.col-xs-0
+    // creates space to center main part of page, reduces to zero on smaller screens
+    .col-lg-10.col-md-10.col-sm-12.col-xs-12.col-centered
+      p.text-right
+        a(href='/users/login') sign in
+        |  | 
+        a(href='/users/register') sign up
+    .col-lg-1.col-md-1.col-sm-0.col-xs-0
+    // creates space to center main part of page, reduces to zero on smaller screens
+  .row
+    .col-lg-1.col-md-1.col-sm-0.col-xs-0
+    // creates space to center main part of page, reduces to zero on smaller screens
+    // logo and buttons on header row are here
+    #cHeader.col-lg-10.col-md-10.col-sm-12.col-xs-12.col-centered
+      a(href='/') 
+        img#topLogo.moveLeft.col-lg-4.col-md-4.col-sm-6.col-xs-8(src='/img/savings-multiplied-logo.png')
+      #placeHolder.col-lg-8.col-md-8.col-sm-6.col-xs-0.moveRight
+      #topButtons.col-lg-7.col-md-7.col-sm-6.col-xs-12.moveRight
+        ul#ulButtons.btn-group.col-lg-12.col-md-12.col-sm-12.col-xs-12
+          li.spaceButtons.col-lg-3.col-md-3.col-sm-3.col-xs-3
+            button#btnAbout.btn.col-lg-12.col-md-12.col-sm-12.col-xs-12(type='button') About Me 
+          li.spaceButtons.col-lg-3.col-md-3.col-sm-3.col-xs-3
+            button#btnContact.btn.col-lg-12.col-md-12.col-sm-12.col-xs-12(type='button') Contact Me
+          li.spaceButtons.col-lg-3.col-md-3.col-sm-3.col-xs-3
+            button#btnBlog.btn.col-lg-12.col-md-12.col-sm-12.col-xs-12(type='button') Blog
+          li.spaceButtons.col-lg-3.col-md-3.col-sm-3.col-xs-3
+            button#btnPress.btn.col-lg-12.col-md-12.col-sm-12.col-xs-12(type='button') Press
+      img.moveRight.col-lg-7.col-md-6.col-sm-6.col-xs-12(src='/img/tagline.png', id='')
+    .col-lg-1.col-md-1.col-sm-0.col-xs-0

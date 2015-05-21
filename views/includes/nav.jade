@@ -1,0 +1,27 @@
+#pNavigation
+  .row
+    .col-lg-1.col-md-1.col-sm-0.col-xs-0
+    nav#cNav.navbar-default.col-lg-10.col-md-10.col-sm-12(role='navigation')
+      #cTest.navbar-header
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-ex1-collapse')
+          span.sr-only Toggle navigation                         
+          span.icon-bar                         
+          span.icon-bar                       
+          span.icon-bar
+      .collapse.navbar-collapse.navbar-right.navbar-ex1-collapse
+        ul.nav.navbar-nav
+          li 
+            a(href='/auction') Buy
+          li
+            a(href='/sell') Sell
+          li
+            a(href='#') How it Works
+          li
+            a(href='#') Links
+          li
+            a(href='#') Community
+          li
+            form.navbar-form.navbar-right(role='search')
+              .form-group
+                input#search.form-control(type='text', placeholder='Search')
+      .col-lg-1.col-md-1.col-sm-0.col-xs-0

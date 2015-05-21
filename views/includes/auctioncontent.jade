@@ -1,0 +1,150 @@
+#pBody
+  .row
+    .col-lg-1.col-md-1.col-sm-0.col-xs-0
+    // creates space to center main part of page, reduces to zero on smaller screens
+    #cBody.col-lg-10.col-md-10.col-sm-12.col-xs-12.col-centered
+      .row
+        #leftAuction.moveLeft.col-lg-3.col-md-3.col-sm-12.col-xs-12.col-centered
+          #aucSearch.col-lg-12.col-md-12.col-sm-12.col-xs-12
+            div
+              Limit your search by:
+              hr       
+            div
+              input.f(type='text', placeholder='Search')
+              button.btn(type='button', id='')
+              search
+          #aucCondition.radio.col-lg-12.col-md-12.col-sm-12.col-xs-12
+            div Condition:
+            div
+              label.radio
+                input#inlineRadio1(type='radio', name='Condition', value='option1')
+                New
+              label.radio
+                input#inlineRadio2(type='radio', name='Condition', value='option2')
+                Gently Used
+          // closes aucCondition radio buttons
+          #aucSize.col-lg-12.col-md-12.col-sm-12.col-xs-12
+            div Size:                
+            .radio
+              label.radio-inline 4
+                input#inlineRadio1(type='radio', name='Size', value='option1') 
+              label.radio-inline 8
+                input#inlineRadio2(type='radio', name='Size', value='option2') 
+            .radio
+              label.radio-inline 5
+                input#inlineRadio3(type='radio', name='Size', value='option3') 
+              label.radio-inline 9
+                input#inlineRadio4(type='radio', name='Size', value='option4') 
+            .radio
+              input#inlineRadio5(type='radio', name='Size', value='option5') 
+              || 6
+              input#inlineRadio6(type='radio', name='Size', value='option6') 
+              || 10
+            .radio
+              label.radio-inline 7
+                input#inlineRadio7(type='radio', name='Size', value='option7') 
+              label.radio-inline 11
+                input#inlineRadio8(type='radio', name='Size', value='option8') 
+          // closes aucSize radio buttons
+          #aucSeason.col-lg-12.col-md-12.col-sm-12.col-xs-12
+            div Season:
+              br
+            .radio
+              label.radio
+                input#inlineRadio1(type='radio', name='Season', value='option1')
+                All Seasons
+              label.radio
+                input#inlineRadio2(type='radio', name='Season', value='option2')
+                Spring
+              label.radio
+                input#inlineRadio3(type='radio', name='Season', value='option3')
+                Summer
+              label.radio
+                input#inlineRadio4(type='radio', name='Season', value='option4')
+                Fall                 
+              label.radio
+                input#inlineRadio5(type='radio', name='Season', value='option5')
+                Winter
+          // closes aucSeason radio buttons
+          #aucSeason.col-lg-12.col-md-12.col-sm-12.col-xs-12
+            div Type:
+              br           
+            .radio
+              label.radio
+                input#inlineRadio1(type='radio', name='Type', value='option1')
+                Any
+              label.radio
+                input#inlineRadio2(type='radio', name='Type', value='option2')
+                One-Piece                 
+              label.radio
+                input#inlineRadio3(type='radio', name='Type', value='option3')
+                Tops             
+              label.radio
+                input#inlineRadio4(type='radio', name='Type', value='option4')
+                Bottoms
+          // closes aucType radio buttons
+          // Single button
+          #aucBrand.col-lg-12.col-md-12.col-sm-12.col-xs-12
+            div Brand:       
+            div
+              select(name='Brand')
+                option(value='value1') Janie and Jack
+                
+                 
+                option(value='value2') Old Navy
+                 
+                option(value='value3') Roth&apos;s Child
+                 
+                option(value='value3') Garanimals
+                 
+                option(value='value3') Burberry
+                 
+                 
+                option(value='value3') Osh Kosh B&apos;Gosh
+          // closes aucBrand div
+        // closes left Auction div
+        #rightAuction.moveRight.col-lg-9.col-md-9.col-sm-12.col-xs-12
+          .row
+            #breadCr.col-lg-12.col-md-12.col-sm-12.col-xs-12.moveLeft
+              .bs-example
+                ul.breadcrumb
+                  li
+                    a.Bcrumb(href='#') All
+                         
+                  li
+                    a.Bcrumb(href='#') Twin
+                         
+                  li.Bcrumb B/G
+              // closes div bs-example
+            // closes div moveLEft
+          // closes div row
+          .row
+            .col-lg-3.col-md-3.col-sm-3.col-xs-3.moveLeft
+              form.inline
+                label#label sort by:
+               
+                select
+                  option.inline(value='price') price
+                 
+                  option.inline(value='') item
+            // closes div moveLeft
+            .col-lg-4.col-md-4.col-sm-4.col-xs-4
+           
+            .col-lg-4.col-md-4.col-sm-4.col-xs-4
+              p.inline  pre.page num.nextview all
+          // closes out the row
+          div#theStuff.row
+            each product in products
+              div.col-lg-3.col-md-3.col-sm-4.col-xs-6(id='#{product.id}')
+                img.auctionimg(src="#{product.picture}")
+                p #{product.itemname}
+                a.deleteButton.btn-link(id='#{product.id}')
+                  span.glyphicon.glyphicon-trash(aria-hidden='true')
+
+
+                
+script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+script(src="../javascripts/auctionHandler.js")     
+
+
+  

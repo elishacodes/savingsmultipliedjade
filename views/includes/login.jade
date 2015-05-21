@@ -1,0 +1,22 @@
+#pBody
+  .row
+    .col-lg-1.col-md-1.col-sm-0.col-xs-0
+    // creates space to center main part of page, reduces to zero on smaller screens
+    #cBody.col-lg-10.col-md-10.col-sm-12.col-xs-12.col-centered
+      .row
+        .col-lg-12
+        form#registerForm(method='POST', action='/users/login')
+          h1 Please login               
+          .formfield
+            .formfield--prompt Username:               
+              input#username(type='text', name='username')           
+          .formfield
+            .formfield--prompt Password:               
+              input#password(type='password', name='password')   
+          input(type='submit', value='Login')
+ 
+    // closes cBody div
+    .col-lg-1.col-md-1.col-sm-0.col-xs-0
+    // creates space to center main part of page, reduces to zero on smaller screens
+  // closes row div
+  // closes pBody div
